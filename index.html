@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frosty</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./icons/logo-1.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Libre+Baskerville:ital@1&family=Noto+Serif:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            overflow-x: hidden;
+        }
+        
+        .home {
+            width: 100%;
+            height: 100vh;
+            background-image: url(./Images/bg-20.jpg);
+            background-size: cover;
+            background-repeat: none;
+            background-position: center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-blend-mode: darken;
+            padding: 100px 70px;
+            padding-bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        
+        .name {
+            font-family: 'Lobster Two', cursive;
+            font-size: 140px;
+            color: rgb(175, 56, 102);
+            text-shadow: rgb(83, 81, 81) 4px 4px 4px;
+        }
+        
+        .name-small {
+            font-family: 'Lobster Two', cursive;
+            font-size: 85px;
+            color: rgb(175, 56, 102);
+        }
+        
+        .home-col-left {
+            display: flex;
+            flex-direction: column;
+            justify-self: center;
+            align-items: center;
+            text-align: center;
+            padding: 0px 5px;
+        }
+        
+        .home-col-right {
+            display: flex;
+            flex-direction: column;
+            justify-self: center;
+            align-items: center;
+            text-align: end;
+            padding: 0px 0px 0px 0px;
+        }
+        
+        .home-text-right {
+            font-family: 'lobster two', cursive;
+            color: rgb(175, 56, 102);
+            font-size: 50px;
+            padding: 50px 0px 0 50px;
+            text-align: center;
+        }
+        
+        .home-text-right-small {
+            font-family: 'lobster two', cursive;
+            color: rgb(175, 56, 102);
+            font-size: 50px;
+            padding: 5px 0 0 50px;
+            text-align: center;
+        }
+        
+        .menu {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(./Images/new-bg-5.png);
+            background-size: cover;
+            background-repeat: none;
+            background-position: center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-blend-mode: darken;
+            padding: 250px 0;
+        }
+        
+        .card-holder {
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .card-text-head {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .card {
+            width: 350px;
+        }
+        
+        .about {
+            width: 100%;
+            display: flex;
+            background-color: #fff3d9;
+            background-size: cover;
+            background-repeat: none;
+            background-position: center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-blend-mode: darken;
+            padding: 100px 70px;
+        }
+        
+        .about-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 0;
+        }
+        
+        .about-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .about-text-head {
+            color: rgb(172, 10, 42);
+            font-family: 'lobster two', cursive;
+            font-size: 60px;
+        }
+        
+        .about-text-normal {
+            color: #f8005f;
+            font-family: 'Lobster Two', cursive;
+            font-size: 32px;
+        }
+        
+        .contact {
+            width: 100%;
+            display: flex;
+            background-image: url(./Images/Vector.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            justify-content: center;
+            align-items: center;
+            padding: 100px 70px;
+        }
+        
+        .card-form {
+            width: 400px;
+            height: 500px;
+            background-color: white;
+            box-shadow: 0 4px 10px rgb(0, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .contact-left {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 100px;
+        }
+        
+        .contact-right {
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+        }
+        
+        .text-right {
+            display: flex;
+            font-family: 'Lobster Two', cursive;
+            padding: 10px;
+            color: rgb(185, 36, 86);
+            font-size: 30px;
+            text-align: center;
+        }
+        
+        .footer {
+            width: 100%;
+            height: 20vh;
+            display: flex;
+            flex-flow: column;
+        }
+        
+        .footer .social {
+            display: flex;
+            flex-flow: row;
+            justify-content: center;
+            align-items: center;
+            size: 20px;
+            background-color: rgba(37, 37, 37, 0.418);
+        }
+        
+        .social ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style-type: none;
+        }
+        
+        .social ul li {
+            padding: 45px 25px 25px 25px;
+            font-size: 50px;
+        }
+        
+        .footer .address {
+            font-family: 'Lobster Two', cursive;
+            background-color: rgba(37, 37, 37, 0.418);
+            color: rgb(177, 15, 69);
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Home Page Starts -->
+    <div class="home clearfix" id="home">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg  navbar-expand-sm navbar-light bg-transparent fixed-top">
+            <a class=" navbar-brand " href="# "><img src="./icons/logo-1.svg " alt="logo-1 " style="width: 50px; "></a>
+            <button class="navbar-toggler " type="button " data-toggle="collapse " data-target="#navbarNavAltMarkup " aria-controls="navbarNavAltMarkup " aria-expanded="false " aria-label="Toggle navigation ">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarNavAltMarkup ">
+                <div class="navbar-nav " style="text-align: center; ">
+                    <a class="nav-item nav-link active " href="#home ">Home <span class="sr-only ">(current)</span></a>
+                    <a class="nav-item nav-link " href="#menu">Menu</a>
+                    <a class="nav-item nav-link " href="#about">AboutUs</a>
+                    <a class="nav-item nav-link " href="#contact">ContactUs</a>
+
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar Ends -->
+
+        <!-- Hero Section -->
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 home-col-left">
+                <h1 class="name">Frosty</h1>
+                <p class="name-small">Ice Cream</p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 home-col-right">
+                <h1 class="home-text-right">For those who Scream </h1>
+                <h2 class="home-text-right-small">Ice Cream </h2>
+                <!-- <a class="btn btn-ylw" href="#about">
+                    <span>More About Us</span>
+                </a> -->
+            </div>
+        </div>
+        <!-- Hero Section Ends -->
+    </div>
+    <!-- Home Page Ends -->
+
+    <!-- Menu Section Starts -->
+
+    <div class="menu clearfix" id="menu">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12 card-holder">
+                <div class="card">
+                    <img src="./menu/cup.jpg" class="card-img-top" alt="cup">
+                    <div class="card-body">
+                        <p class="card-text-head">Cups</p>
+                        <p>Checkout Our Amazing Range Of Flavours Of Our Ice Cream Cups</p>
+                        <a href="#" class="btn btn-danger">Checkout Cups</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 card-holder">
+                <div class="card">
+                    <img src="./menu/waffle-2.jpg" class="card-img-top" alt="cup">
+                    <div class="card-body">
+                        <p class="card-text-head">Waffles</p>
+                        <p>Checkout Our Amazing Range Of Flavours Of Our Ice Cream Waffles</p>
+                        <a href="#" class="btn btn-danger">Checkout Waffles</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 card-holder">
+                <div class="card">
+                    <img src="./menu/shake-2.jpg" class="card-img-top" alt="cup">
+                    <div class="card-body">
+                        <p class="card-text-head">Shakes</p>
+                        <p>Checkout Our Amazing Range Of Flavours Of Our Ice Cream Shakes</p>
+                        <a href="#" class="btn btn-danger">Checkout Shakes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 card-holder">
+                <div class="card">
+                    <img src="./menu/cone-3.jpg" class="card-img-top" alt="cup">
+                    <div class="card-body">
+                        <p class="card-text-head">Cones</p>
+                        <p>Checkout Our Amazing Range Of Flavours Of Our Ice Cream Cones</p>
+                        <a href="#" class="btn btn-danger">Checkout Cones</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu Section Ends -->
+    <!-- About Section starts -->
+
+    <div class="about clearfix" id="about">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-cm-12 about-image">
+                <img src="./Images/about.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 col-md-6 col-cm-12 about-text">
+                <p class="about-text-head">Frosty</p>
+                <p class="about-text-normal">We Started This Ice Cream Parlour As Our Dream And Aim To Provide Best Test And Best Quality Possible. We Use Only Natural Ingredients For Our Products To Ensure Health Of You. We Are Tied To Work Hard To Give You Delicious Ice Cream For
+                    Your Utmost Joy For Special And Memorable Moments. Made With Love For Those Who Scream Ice Cream</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section Ends -->
+
+    <!-- Contact Section Starts -->
+
+    <div class="contact" id="contact">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 contact-left">
+                <img src="./Images/icecream.svg" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 contact-right">
+                <div class="text-right"> We Would Love To Hear From You</div>
+                <div class="card-holder">
+                    <div class="card-form">
+                        <form action="#" method="POST">
+                            <div>
+                                <label for="email">Email</label>
+                                <input type="text" class="form-control" name="email" placeholder="abc@xyz.com">
+                            </div>
+                            <div>
+                                <label for="feed">Feedback</label>
+                                <textarea name="feed" id="" cols="40" rows="10" placeholder="Leave Your Valuable feedback here.."></textarea>
+                            </div>
+                            <div>
+                                <a href="#" type="submit" class="btn btn-primary" style="width: 100%;padding: 10px;margin-top: 10px;">Submit</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section Ends -->
+    <!-- Footer Starts here -->
+    <div class="footer col-sm-12 col-lg-12 col-md-12">
+        <div class="row">
+            <div class="social col-sm-12 col-md-6 col-lg-6">
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com/" target="_blank"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-official"
+                            aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.pinterest.com/" target="_blank"><i class="fa fa-pinterest"
+                            aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.whatsapp.com/" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                    </li>
+                    <ul>
+            </div>
+            <div class="address col-sm-12 col-md-6 col-lg-6">
+                <h1>
+                    <center> <strong> Frosty Ice Cream </strong> </center>
+                </h1>
+                <h2>
+                    <center> Shop No.20, Kumar Pacific Mall, Near Swargate, Pune.</center>
+                </h2>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js " integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI " crossorigin="anonymous "></script>
+</body>
+
+</html>
